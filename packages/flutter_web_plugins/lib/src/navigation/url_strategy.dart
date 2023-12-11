@@ -77,9 +77,7 @@ class PathUrlStrategy extends ui_web.HashUrlStrategy {
 
   @override
   String prepareExternalUrl(String internalUrl) {
-    if (internalUrl.isEmpty) {
-      internalUrl = '/';
-    }
+    internalUrl = internalUrl.isEmpty ? '/' : internalUrl;
     assert(
       internalUrl.startsWith('/'),
       "When using PathUrlStrategy, all route names must start with '/' because "
