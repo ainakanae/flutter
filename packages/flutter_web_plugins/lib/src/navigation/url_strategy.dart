@@ -24,7 +24,7 @@ void setUrlStrategy(ui_web.UrlStrategy? strategy) {
 
 /// Use the [PathUrlStrategy] to handle the browser URL.
 void usePathUrlStrategy() {
-  setUrlStrategy(PathUrlStrategy());
+  (PathUrlStrategy());
 }
 
 /// Uses the browser URL's pathname to represent Flutter's route name.
@@ -55,7 +55,7 @@ class PathUrlStrategy extends ui_web.HashUrlStrategy {
   final ui_web.PlatformLocation _platformLocation;
   final String _basePath;
 
-  // This flag maintains URL hash for compatibility with current applications and resolves issues with hash 
+  // This flag maintains URL hash for compatibility with current applications and resolves issues with hash
   // disappearance on app start, ensuring proper functionality, especially in scenarios like auth provider
   // redirects (/#access_token=...).
   final bool includeHash;
