@@ -23,8 +23,8 @@ void setUrlStrategy(ui_web.UrlStrategy? strategy) {
 }
 
 /// Use the [PathUrlStrategy] to handle the browser URL.
-void usePathUrlStrategy() {
-  (PathUrlStrategy());
+void setPathUrlStrategy() {
+  setUrlStrategy(PathUrlStrategy());
 }
 
 /// Uses the browser URL's pathname to represent Flutter's route name.
