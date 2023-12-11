@@ -32,9 +32,9 @@ void main() {
       }, returnsNormally);
     });
 
-    test('Can usePathUrlStrategy', () {
+    test('Can setPathUrlStrategy', () {
       expect(() {
-        usePathUrlStrategy();
+        setPathUrlStrategy();
       }, returnsNormally);
     });
   });

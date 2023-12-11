@@ -84,7 +84,7 @@ void setUrlStrategy(UrlStrategy? strategy) {
 }
 
 /// Use the [PathUrlStrategy] to handle the browser URL.
-void usePathUrlStrategy() {
+void setPathUrlStrategy() {
   // No-op in non-web platforms.
 }
 
