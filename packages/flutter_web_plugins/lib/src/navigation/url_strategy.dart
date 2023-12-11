@@ -55,14 +55,9 @@ class PathUrlStrategy extends ui_web.HashUrlStrategy {
   final ui_web.PlatformLocation _platformLocation;
   final String _basePath;
 
-  /// There were an issue with url #hash which disappears from URL on first start of the web application
-  /// This flag allows to preserve that hash and was introduced mainly to preserve backward compatibility
-  /// with existing applications that rely on a full match on the path. If someone navigates to
-  /// /profile or /profile#foo, they both will work without this flag otherwise /profile#foo won't match
-  /// with the /profile route name anymore because the hash became part of the path.
-  ///
-  /// This flag solves the edge cases when using auth provider which redirects back to the app with
-  /// token in redirect URL as /#access_token=bla_bla_bla
+  // This flag maintains URL hash for compatibility with current applications and resolves issues with hash 
+  // disappearance on app start, ensuring proper functionality, especially in scenarios like auth provider
+  // redirects (/#access_token=...).
   final bool includeHash;
 
   @override
